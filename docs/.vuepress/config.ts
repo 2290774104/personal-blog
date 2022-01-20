@@ -54,5 +54,18 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       createYear: 2022, // 博客创建年份
       copyrightInfo: ''
     }
+  },
+  // 插件
+  plugins: {
+    // 一键复制代码
+    'one-click-copy': {
+      copySelector: [
+        'div[class*="language-"] pre',
+        'div[class*="aside-code"] aside'
+      ], // String or Array
+      copyMessage: '复制成功', // default is 'Copied successfully!'
+      toolTipMessage: '复制代码', // default is ''Copy to clipboard'
+      duration: 1000 // prompt message display time
+    }
   }
 });
