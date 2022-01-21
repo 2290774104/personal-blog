@@ -4,7 +4,10 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
   theme: 'vdoing',
   title: "tang's blog",
   description: '唐皓晨的个人博客',
-  head: [['link', { rel: 'icon', href: '/favicon.jpg' }]],
+  head: [
+    ['link', { rel: 'icon', href: '/favicon.jpg' }],
+    ['script', { src: 'https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js' }]
+  ],
   markdown: {
     lineNumbers: true
   },
@@ -57,15 +60,22 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
   },
   // 插件
   plugins: {
-    // 一键复制代码
+    // 代码块一键复制
     'one-click-copy': {
       copySelector: [
         'div[class*="language-"] pre',
         'div[class*="aside-code"] aside'
-      ], // String or Array
-      copyMessage: '复制成功', // default is 'Copied successfully!'
-      toolTipMessage: '复制代码', // default is ''Copy to clipboard'
-      duration: 1000 // prompt message display time
+      ], // 需要显示复制按钮的元素
+      copyMessage: '复制成功', // 复制成功提示文字
+      toolTipMessage: '复制代码', // 复制按钮title
+      duration: 1000 // 复制成功提示文字显示时间
+    },
+    'demo-block': {
+      settings: {
+        jsfiddle: false, // 是否显示 jsfiddle 链接
+        codepen: true, // 是否显示 codepen 链接
+        horizontal: false // 是否展示为横向样式
+      }
     }
   }
 });

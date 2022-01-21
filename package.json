@@ -17,6 +17,7 @@
   "license": "ISC",
   "devDependencies": {
     "vuepress": "^1.9.7",
+    "vuepress-plugin-demo-block": "^0.7.2",
     "vuepress-plugin-one-click-copy": "^1.0.6",
     "vuepress-theme-vdoing": "^1.9.4"
   }
