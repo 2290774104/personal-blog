@@ -21,8 +21,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
           {
             text: '学习笔记',
             items: [
-              { text: 'VuePress', link: '/pages/b42ac3/' },
-              { text: 'vuepress-theme-vdoing', link: '/pages/28a711/' }
+              { text: 'VuePress-v1.x', link: '/pages/b42ac3/' }
             ]
           }
         ]
