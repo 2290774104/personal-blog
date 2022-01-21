@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "async-validator": "^1.11.5",
+    "dayjs": "^1.10.7",
     "element-ui": "^2.15.6"
   }
 }

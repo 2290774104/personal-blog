@@ -1,5 +1,6 @@
 import { defineConfig4CustomTheme } from 'vuepress/config';
 import { VdoingThemeConfig } from 'vuepress-theme-vdoing/types';
+import dayjs from 'dayjs'
 export default defineConfig4CustomTheme<VdoingThemeConfig>({
   theme: 'vdoing',
   title: "tang's blog",
@@ -75,6 +76,12 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         jsfiddle: false, // 是否显示 jsfiddle 链接
         codepen: true, // 是否显示 codepen 链接
         horizontal: false // 是否展示为横向样式
+      }
+    },
+    // "上次更新"的时间格式
+    '@vuepress/last-updated': {
+      transformer: (timestamp, lang) => {
+        return dayjs(timestamp).format('YYYY/MM/DD, HH:mm:ss');
       }
     }
   }
