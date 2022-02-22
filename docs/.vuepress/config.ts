@@ -31,6 +31,10 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
               { text: 'VuePress-v1.x', link: '/pages/b42ac3/' },
               { text: 'JavaScript异步编程', link: '/pages/a6e94e/' }
             ]
+          },
+          {
+            text: 'css',
+            items: [{ text: 'css常用片段', link: '/pages/d4868f/' }]
           }
         ]
       },
