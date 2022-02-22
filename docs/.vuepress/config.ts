@@ -1,8 +1,15 @@
 import { defineConfig4CustomTheme } from 'vuepress/config';
 import { VdoingThemeConfig } from 'vuepress-theme-vdoing/types';
-import dayjs from 'dayjs'
+import dayjs from 'dayjs';
 export default defineConfig4CustomTheme<VdoingThemeConfig>({
   theme: 'vdoing',
+  locales: {
+    '/': {
+      lang: 'zh-CN',
+      title: "tang's blog",
+      description: '唐皓晨的个人博客'
+    }
+  },
   title: "tang's blog",
   description: '唐皓晨的个人博客',
   head: [
@@ -71,12 +78,28 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       toolTipMessage: '复制代码', // 复制按钮title
       duration: 1000 // 复制成功提示文字显示时间
     },
-    'demo-block': {
-      settings: {
-        jsfiddle: false, // 是否显示 jsfiddle 链接
-        codepen: true, // 是否显示 codepen 链接
-        horizontal: false // 是否展示为横向样式
-      }
+    'demo-container': {
+      component: 'demo-block',
+      locales: [
+        {
+          lang: 'zh-CN',
+          'demo-block': {
+            'hide-text': '隐藏代码',
+            'show-text': '显示代码',
+            'copy-text': '复制代码',
+            'copy-success': '复制成功'
+          }
+        },
+        {
+          lang: 'en-US',
+          'demo-block': {
+            'hide-text': 'Hide',
+            'show-text': 'Expand',
+            'copy-text': 'Copy',
+            'copy-success': 'Successful'
+          }
+        }
+      ]
     },
     // "上次更新"的时间格式
     '@vuepress/last-updated': {
