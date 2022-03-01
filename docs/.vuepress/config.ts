@@ -4,6 +4,13 @@ import nav from './config/nav'
 import plugins from './config/plugins'
 export default defineConfig4CustomTheme<VdoingThemeConfig>({
   theme: 'vdoing',
+  locales: {
+    '/': {
+      lang: 'zh-CN',
+      title: "tang's blog",
+      description: '唐皓晨的个人博客'
+    }
+  },
   title: "tang's blog",
   description: '唐皓晨的个人博客',
   head: [
