@@ -5,7 +5,8 @@ const nav: NavItem[] = [
     text: '前端',
     items: [
       { text: '学习笔记', link: '/pages/b42ac3/' },
-      { text: 'css常用片段', link: '/pages/d4868f/' }
+      { text: 'css常用片段', link: '/pages/d4868f/' },
+      { text: '项目搭建', link: '/pages/e74a6f/' }
     ]
   },
   {
